@@ -83,5 +83,5 @@ app.get('*', (req, res) => {
 
 // menjalankan server di port 4000
 app.listen(port, () => {
-    console.log('Server berjalan di port ' + port)
+    console.log('Server berjalan pada port ' + port)
 })
