@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const port = process.env.PORT || 4000
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/prediksiCuaca')
+const getBerita = require('./utils/berita');
 
 //Mendefinisikan jalur/path untuk konfigurasi Express
 const app = express()
@@ -22,15 +23,7 @@ app.use(express.static(direktoriPublic))
 //ini halaman/page utama
 app.get('', (req, res) => {
     res.render('index', {
-        judul: 'Weatherytics',
-        nama: 'Naufal Ihsan'
-    })
-})
-//ini halaman bantuan/FAQ (Frequently Asked Question)
-app.get('/bantuan', (req,res) => {
-    res.render('bantuan', {
-        teksBantuan: 'Bantuan apa yang anda butuhkan?',
-        judul: 'FAQ',
+        judul: 'Aplikasi Cek Cuaca',
         nama: 'Naufal Ihsan'
     })
 })
@@ -64,6 +57,32 @@ app.get('/tentang', (req, res) => {
         nama: 'Naufal Ihsan'
     })
 })
+//ini halaman bantuan/FAQ (Frequently Asked Question)
+app.get('/bantuan', (req,res) => {
+    res.render('bantuan', {
+        teksBantuan: 'Bantuan apa yang anda butuhkan?',
+        judul: 'FAQ',
+        nama: 'Naufal Ihsan'
+    })
+})
+
+// Rute untuk halaman berita
+app.get('/berita', (req, res) => {
+    getBerita((error, dataBerita) => {
+        if (error) {
+            return res.render('berita', {
+                judul: 'News Today',
+                error: 'Gagal mengambil berita. Silakan coba lagi nanti.'
+            });
+        }
+
+        res.render('berita', {
+            judul: 'News',
+            berita: dataBerita,
+            nama: 'Naufal Ihsan'
+        });
+    });
+});
 
 app.get('/bantuan/*',(req, res) => {
     res.render('404', {

@@ -1,9 +1,5 @@
-h1 {
-  color: grey;
-}
-
-img {
-  width: 250px;
+.main-content {
+  flex-grow: 1;
 }
 
 body {
@@ -20,17 +16,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.main-content {
-  flex-grow: 1;
-}
-
-footer {
-  color: #888888;
-  border-top: 1px solid #eeeeee;
-  margin-top: 16px;
-  padding: 16px 0;
 }
 
 header {
@@ -57,19 +42,40 @@ h1 {
   color: grey;
 }
 
-.portrait {
-  width: 250px;
+.faq-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-input {
-  border: 2px solid #cccccc;
-  padding: 8px;
+.faq-list .faq-item {
+  display: grid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease;
+  margin-bottom: 15px;
+  background-color: #ffffffcc; /* Transparansi background */
+  backdrop-filter: blur(5px); /* Efek blur pada background */
 }
 
-button {
-  cursor: pointer;
-  border: 0px solid #cccccc;
-  background: #888888;
-  color: white;
-  padding: 9px;
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
 }

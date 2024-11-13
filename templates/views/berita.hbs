@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - Prediksi Cuaca</title>
+    <link rel="stylesheet" href="/css/berita.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <!-- Bagian Berita -->
+        <section class="news-section">
+            <h2 class="news-header">Berita Terkini</h2>
+            <p><em>"Berita Langsung & Artikel Blog."</em></p>
+            <div class="news-items">
+                {{#each berita}} <!-- Looping untuk menampilkan data berita -->
+                <div class="news-item">
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                    <a href="{{url}}" target="_blank">Baca Selengkapnya</a> <!-- Link ke artikel -->
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    </div>
+    {{>footer}} <!-- Menyertakan footer -->
+</body>
+</html>

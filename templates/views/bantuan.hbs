@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{> head title="FAQ"}}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bantuan - Prediksi Cuaca</title>
+        <link rel="stylesheet" href="\css\bantuan.css">
+      </head>
 <body>
     <div class="main-content">
         {{>header}}
-        <p>{{teksBantuan}}</p>
+        <section class="faq-header">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <p>Di bawah ini adalah beberapa pertanyaan umum yang sering diajukan tentang aplikasi prediksi cuaca kami.</p>
+          </section>
+      
+          <section class="faq-list">
+            <div class="faq-item">
+              <h3>Halaman ini digunakan untuk apa?</h3>
+              <p>Halaman ini memberikan informasi dan panduan mengenai cara penggunaan website prediksi cuaca ini. Anda dapat menemukan panduan tentang cara membaca data cuaca, cara mencari prediksi cuaca di lokasi tertentu, serta tips lainnya untuk memaksimalkan manfaat dari layanan ini.</p>
+            </div>
+      
+            <div class="faq-item">
+              <h3>Apa itu API?</h3>
+              <p>API (Application Programming Interface) adalah sebuah antarmuka yang memungkinkan berbagai aplikasi atau perangkat lunak untuk berkomunikasi satu sama lain. API menyediakan cara standar bagi aplikasi untuk meminta dan bertukar data atau fungsi dari aplikasi lain, tanpa perlu memahami detail implementasi di baliknya. Contohnya, API cuaca memungkinkan aplikasi untuk mengambil data prakiraan cuaca dari layanan tertentu dan menampilkannya langsung kepada pengguna.</p>
+            </div>
+      
+            <div class="faq-item">
+              <h3>API apa yang digunakan dalam aplikasi ini?</h3>
+              <p>Aplikasi ini menggunakan beberapa API untuk menyajikan data cuaca yang akurat:</p>
+              <ul>
+                  <li><strong>Weatherstack</strong> - digunakan untuk mendapatkan data prediksi cuaca, seperti suhu, kelembapan, dan kondisi cuaca di berbagai lokasi.</li>
+                  <li><strong>Positionstack</strong> - membantu mencari data lokasi atau koordinat berdasarkan nama kota atau tempat yang dimasukkan pengguna.</li>
+                  <li><strong>Mediastack</strong> - menyediakan berita terkini yang relevan dengan cuaca atau kondisi di lokasi tertentu, memberikan konteks tambahan bagi pengguna.</li>
+              </ul>
+              <p>Ketiga API ini bekerja bersama untuk menyajikan informasi cuaca yang lengkap dan akurat.</p>
+          </div>
+      
+            <div class="faq-item">
+              <h3>Apakah aplikasi ini gratis digunakan?</h3>
+              <p>Ya, aplikasi prediksi cuaca ini sepenuhnya gratis dan dapat diakses oleh semua pengguna tanpa biaya tambahan.</p>
+            </div>
+      
+            <div class="faq-item">
+              <h3>Bagaimana jika saya menemukan masalah atau bug dalam aplikasi?</h3>
+              <p>Jika Anda menemukan masalah atau bug, silakan hubungi kami melalui halaman kontak atau email yang tertera di halaman Tentang.</p>
+            </div>
+          </section>
     </div>
     {{>footer}}
 </body>

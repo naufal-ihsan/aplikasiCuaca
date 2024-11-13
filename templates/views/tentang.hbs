@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{> head title="About"}}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang - Prediksi Cuaca</title>
+  <link rel="stylesheet" href="\css\tentang.css">
+</head>
 <body>
     <div class="main-content">
-        {{>header}}
-        <img class="potrait" src="/img/profile.png">
+      {{>header}}
+      
+        <section class="about-app">
+            <h2>Tentang Aplikasi Prediksi Cuaca</h2>
+            <p>Aplikasi Prediksi Cuaca ini dirancang untuk memberikan informasi cuaca terkini dan perkiraan cuaca ke depannya.</p>
+            <p>Dengan aplikasi ini, pengguna dapat mengakses prakiraan cuaca harian, mingguan, dan informasi lainnya untuk membantu mereka merencanakan aktivitas.</p>
+          </section>
+          <div class="about-main">
+          <section class="about-developer">
+            <h2>Tentang Pengembang</h2>
+            <div class="developer-profile">
+              <img src="/img/profile.png" alt="Foto Pengembang" class="profile-img">
+              <div class="profile-info">
+                <h3>Naufal Ihsan</h3>
+                <p>Saya adalah seorang mahasiswa Teknik Informatika di Universitas Negeri Padang, dengan minat khusus dalam pengembangan aplikasi dan analisis data.</p>
+                <p>Saya tertarik untuk membuat aplikasi yang bermanfaat bagi masyarakat, dan prediksi cuaca adalah salah satunya.</p>
+              </div>
+            </div>
+          </section>
+      
+          <section class="contact-info">
+            <h2>Kontak</h2>
+            <p>Jika Anda memiliki pertanyaan atau umpan balik, silakan hubungi saya melalui:</p>
+            <ul>
+              <li>Email: ihsann2026@gmail.com</li>
+              <li>LinkedIn: <a href="www.linkedin.com/in/naufal-ihsan-2b8b092b3">linkedin.com/in/naufalihsan</a></li>
+            </ul>
+          </section>
+        </div>
     </div>
     {{>footer}}
 </body>
